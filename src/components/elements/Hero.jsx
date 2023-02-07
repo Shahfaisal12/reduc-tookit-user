@@ -16,6 +16,17 @@ const Hero = () => {
 
   };
 
+  const numberArr = [12, 35, 89, 1];
+
+  // Highest Number: 89
+  const highest = Math.max(...numberArr);
+
+  // get lowest number 1
+  const lowest = Math.min(...numberArr);
+
+  console.log("Highest Number: " + highest);
+
+  console.log("Lowest Number: " + lowest);
 
   return (
     <div className="Hero-Section py-5">

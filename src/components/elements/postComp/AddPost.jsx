@@ -7,9 +7,7 @@ import { selectAllUserPost } from "../../../pages/store/postSlice/PostUserSlice"
 import MenuItem from "@mui/material/MenuItem";
 
 const CssTextField = styled(TextField)({
-  "& label": {
-    color: "#FFF",
-  },
+
   "& label.Mui-focused": {
     color: "green",
   },
@@ -115,19 +113,23 @@ const AddPost = () => {
                   InputLabelProps={{ style: { color: "#FFF" } }}
                 />
               </div>
-              <Button
-                disabled={!canSave}
-                variant="contained"
-                onClick={onSavePostClick}
-                sx={{
-                  "&.Mui-disabled": {
-                    background: "#c1c1c1",
-                    color: "#000000",
-                  },
-                }}
-              >
-                {canSave ? "Submit Post" : "Disabled"}
-              </Button>
+              <div className="text-center">
+                <Button
+                  disabled={!canSave}
+                  variant="contained"
+                  onClick={onSavePostClick}
+                  sx={{
+                    "&.Mui-disabled": {
+                      background: "#c1c1c1",
+                      color: "#000000",
+                      margin: "0px",
+                      width:'180px'
+                    },
+                  }}
+                >
+                  {canSave ? "Submit Post" : "Disabled"}
+                </Button>
+              </div>
             </Box>
           </div>
         </div>

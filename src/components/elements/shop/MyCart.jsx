@@ -35,13 +35,13 @@ const MyCart = () => {
   };
 
   return (
-    <div className="cart-section">
+    <div className="cart-section py-5">
       <div style={{ width: "100%" }}>
         <Container fixed>
           <Typography
             variant="h5"
             align="center"
-            sx={{ fontWeight: "bold", marginTop: "16px" }}
+            sx={{ fontWeight: "bold", marginTop: "16px", color:'#FFF' }}
           >
             My Cart
           </Typography>

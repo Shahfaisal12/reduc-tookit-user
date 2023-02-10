@@ -32,15 +32,15 @@ const Prducts = () => {
     }, [])
 
 if(status === STATUSES.LOADING){
-    return <h2 className='text-center'>Loading...</h2>;
+    return <h2 className='text-center mt-5 pt-5'>Loading...</h2>;
 }
 
 if (status === STATUSES.ERROR){
-    return <h2>Something Went wrong!</h2>;
+    return <h2 className='text-center mt-5 pt-5'>Something Went wrong!</h2>;
 }
 
     return (
-        <div className='prducts-section py-5'>
+        <div className='products-section py-5'>
             <div className="container">
                 <div className="row">
                 <h1>Store</h1>

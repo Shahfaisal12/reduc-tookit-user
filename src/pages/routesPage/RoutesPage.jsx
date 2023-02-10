@@ -7,6 +7,7 @@ import Counter from "../../components/elements/Counter";
 import PostList from "../../components/elements/postComp/PostList";
 import Prducts from '../../components/elements/shop/Prducts'
 import MyCart from '../../components/elements/shop/MyCart'
+import SinglePostPage from "../../components/elements/postComp/SinglePostPage";
 
 const RoutesPage = () => {
   return (
@@ -16,9 +17,10 @@ const RoutesPage = () => {
           <Routes>
             <Route index path="/" element={<Home />} />
             <Route path="/counter" element={<Counter />} />
-            <Route path="/post" element={<PostList />} />
             <Route path="/shop" element={<Prducts />} />
             <Route path="/cart" element={<MyCart />} />
+            <Route path="/post" element={<PostList />} />
+            <Route path="post/post/:postId" element={<SinglePostPage />} />
             <Route path="/*" element={<PageNotFound />} />
           </Routes>
         </Base>

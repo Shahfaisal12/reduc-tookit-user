@@ -6,7 +6,9 @@ const Base = (props) => {
   return (
     <div className='d-flex justify-content-between flex-column' style={{ minHeight: '100vh' }}>
       <Header />
-      {props.children}
+      <div className="mt-5">
+        {props.children}
+      </div>
       <Footer />
     </div>
   )

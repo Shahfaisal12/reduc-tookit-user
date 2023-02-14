@@ -5,6 +5,8 @@ import { addNewPost } from "../../../pages/store/postSlice/PostSlice";
 import { styled } from "@mui/material/styles";
 import { selectAllUserPost } from "../../../pages/store/postSlice/PostUserSlice";
 import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router-dom";
+
 
 const CssTextField = styled(TextField)({
 
@@ -36,6 +38,7 @@ const AddPost = () => {
   const usersData = useSelector(selectAllUserPost);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const canSave =
     [title, content, userId].every(Boolean) && addRequestStatus === "idle";
@@ -48,6 +51,7 @@ const AddPost = () => {
         setTitle("");
         setContent("");
         setUserId("");
+        navigate('/post')
       } catch (err) {
         console.error("Failed to Save the post", err);
       } finally {

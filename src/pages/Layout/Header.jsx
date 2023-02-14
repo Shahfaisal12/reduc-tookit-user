@@ -42,12 +42,12 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/post">
-                  Post
+                  Create Post
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/shop">
-                  Shop
+                <Link className="nav-link text-white" to="/product">
+                  Product
                 </Link>
               </li>
             </ul>
@@ -58,7 +58,7 @@ const Header = () => {
                 to="/cart"
               >
                 <ImCart className="fs-2 text-danger" />
-                <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1">{items.length}</span>
+                <span className="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1">{items.length}</span>
               </Link>
             </div>
             <form className="d-flex">

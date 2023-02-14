@@ -1,17 +1,14 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {
   selectAllPost,
   getPostStatus,
   getPostError,
-  fetchPosts,
 } from "../../../pages/store/postSlice/PostSlice";
-import AddPost from "./AddPost";
-import { useEffect } from "react";
 import PostExpert from "./PostExpert";
+import { Link } from "react-router-dom";
 
 const PostList = () => {
-  const dispatch = useDispatch();
 
   const posts = useSelector(selectAllPost);
   const postStatus = useSelector(getPostStatus);
@@ -31,16 +28,15 @@ const PostList = () => {
   } else if (postStatus === "failed") {
     content = <p>{error}</p>;
   }
-
-  useEffect(() => {
-    if (postStatus === "idle") {
-      dispatch(fetchPosts());
-    }
-  }, [postStatus, dispatch]);
+  
   return (
     <div className="Post-section py-5">
       <div className="container">
-        <AddPost />
+       <div className="row">
+      <div className="d-flex justify-content-end">
+      <Link className="btn btn-custom" to='/addPost'>Create Post</Link>
+      </div>
+       </div>
         <div className="row py-5">
           <h2>Post Section</h2>
           {content}

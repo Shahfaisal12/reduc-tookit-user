@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
   return (
-    <div className="d-flex align-items-center" style={{ height: "80vh" }}>
+    <div className="d-flex align-items-center py-5 text-white" style={{ height: "80vh" }}>
       <div className="w-75 m-auto">
         <p className="h1 fw-bold mb-3" align="center">404</p>
         <p align="center" className="h5 fw-bold mb-3">

@@ -9,6 +9,23 @@ body {
   background-color: #343334 !important;
 }
 
+.btn-custom {
+  border: 1px solid #6c4d6b !important;
+  background: #c409bb !important;
+  font-size: 16px !important;
+  color: #ffffff !important;
+
+  &:hover {
+    background: #c409bb !important;
+    border: 1px solid #f49ff0 !important;
+
+  }
+}
+
+section{
+  word-break: break-all;
+}
+
 /////////////////////////////////// TOOGLER ICON COLOR CHANGE COLOR //////////////////////////
 
 .navbar .navbar-toggler-icon {
@@ -50,7 +67,7 @@ body {
 }
 
 .navbar-toggler {
-  background-color: rgb(52 196 57) !important;
+  background-color: #c409bb !important;
   padding: 10px !important;
 }
 

@@ -49,7 +49,7 @@ const MyCart = () => {
       </div>
       <Container>
         <Box style={{ float: "right" }}>
-          <Link className="btn btn-outline-primary" to="/">
+          <Link className="btn btn-outline-primary" to="/product">
             Product page
           </Link>
         </Box>
@@ -187,14 +187,16 @@ const MyCart = () => {
                 </Stack>
               </CardContent>
             </Card>
-            <Button
-              size="medium"
-              variant="contained"
-              sx={{ float: "right", mt: 2 }}
-              color="error"
-            >
-              CheckOut Items
-            </Button>
+           <Link to='/checkoutpage'>
+           <Button
+           size="medium"
+           variant="contained"
+           sx={{ float: "right", mt: 2 }}
+           color="error"
+         >
+           CheckOut Items
+         </Button>
+           </Link>
           </Grid>
         </Grid>
       </Container>

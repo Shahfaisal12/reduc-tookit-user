@@ -26,7 +26,7 @@ const Counter = () => {
     <div className="row">
     <div className="counter-section text-center">
       <h1>Counter section</h1>
-      <div class="btn-group btn-group-lg mt-4" role="group" aria-label="...">
+      <div className="btn-group btn-group-lg mt-4" role="group" aria-label="...">
         <button type="button" className='btn btn-outline-danger' onClick={() => dispatch(decrement())}>-</button>
         <button type="button" className='btn btn-outline-white text-white'>{count}</button>
         <button type="button" className='btn btn-outline-success' onClick={() => dispatch(increment())}>+</button>
